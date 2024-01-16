@@ -1,0 +1,20 @@
+function printarray(arr, del) {
+    arr = arr.join(`${del}`);
+    console.log(arr);
+}
+
+
+printarray(['One',
+
+    'Two',
+
+    'Three',
+
+    'Four',
+
+    'Five'],
+
+    '-');
+    console.log('=========');
+
+    printarray(['How about no?', 'I', 'will', 'not', 'do', 'it!'], '_');

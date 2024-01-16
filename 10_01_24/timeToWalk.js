@@ -8,14 +8,14 @@ function timeToWalk(steps, footprint, speed) {
     let timePerHour = distance / speed;
  
     let timePerMinute = timePerHour * 60;
-    let totalHour = Math.floor(timePerHour)
-    let totalMin = Math.floor(timePerMinute);
+    let totalHour = timePerHour | 0;
+    let totalMin = timePerMinute | 0;
    
     let timePerSeconds = timePerMinute - totalMin;
     let totalSec = (timePerSeconds * 60).toFixed(0);
 
     if (rest >= 0) {
-        totalMin += Math.trunc(rest);
+        totalMin += (rest) | 0;
     }
     if (totalHour <10) {
         console.log(`0${totalHour}:${totalMin}:${totalSec}`);
