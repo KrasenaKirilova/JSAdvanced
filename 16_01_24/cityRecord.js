@@ -2,7 +2,8 @@ function createCity (name, population, treasury) {
    
     const city = {
         name,
-        population, treasury
+        population, 
+        treasury
     }
     
 return city;

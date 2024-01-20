@@ -1,33 +1,26 @@
-// function rotateArray(arr, count) {
-//     let sorted = [];
+function rotateArray(arr, count) {
+   
 
-//     for(let i = 0; i <= count; i++) {
-//     sorted = arr.sort((a,b) => b.localCompare(a));
-//     }
-//     console.log(sorted);
+   // for (let i = 0; i <= count; i++) {
+        let element = arr.pop();
+        arr.unshift(element);
+  //  }
 
-// }
+    console.log(arr);
 
-
-function rotateArray(arr, rotations) {
-    rotations = rotations % arr.length; // За да избегнем излишно въртене
-
-    // Вземаме последните rotations елемента и ги поставяме в началото
-    let rotatedPart = arr.slice(-rotations);
-    let rotatedArray = rotatedPart.concat(arr.slice(0, arr.length - rotations));
-
-    console.log(rotatedArray.join(' '));
 }
+
+
 
 
 rotateArray(['1',
 
-'2',
+    '2',
 
-'3',
+    '3',
 
-'4'],
+    '4'],
 
-2);
+    2);
 console.log('===========');
 rotateArray(['Banana', 'Orange', 'Coconut', 'Apple'], 15);
