@@ -1,14 +1,18 @@
 function magicMatrices(arr) {
+    let sum = arr[0].reduce((a, b) => a + b, 0);
+    let isMagic = true;
 
-    for (let row = 0; row < arr.length; row++) {
-        // console.log(arr[row]);
-        for (let col = 0; col < row.length; col++) {
-            console.log(arr[row][col]);
+    for(let i = 0; i < arr.length; i ++) {
+        let rowSum = arr[i].reduce((a, b) => a + b, 0);
+        let colSum = arr.map((x) => x[i]).reduce((a, b) => a + b, 0);
+
+        if (rowSum !== sum || colSum !== sum) {
+            isMagic = false;
+            break;
         }
+
     }
-
-
-
+console.log(isMagic);
 }
 
 

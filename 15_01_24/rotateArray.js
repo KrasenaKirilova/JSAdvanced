@@ -1,12 +1,11 @@
 function rotateArray(arr, count) {
-   
 
-   // for (let i = 0; i <= count; i++) {
+    for (let i = 0; i < count; i++) {
         let element = arr.pop();
         arr.unshift(element);
-  //  }
+    }
 
-    console.log(arr);
+    console.log(arr.join(' '));
 
 }
 
