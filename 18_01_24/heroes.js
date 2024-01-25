@@ -12,7 +12,7 @@ function solve() {
                     // } else {
                     //     console.log(`${this.name}`);
                     // }
-                }
+                };
             };
 
         };
